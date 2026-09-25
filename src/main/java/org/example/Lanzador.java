@@ -1,6 +1,8 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Lanzador {
@@ -9,7 +11,7 @@ public class Lanzador {
         Scanner teclado = new Scanner(System.in);
         String numero = "";
 
-        while (!numero.equalsIgnoreCase("salir")) {
+        while (!numero.equals("salir")) {
 
             System.out.println("Introduce un número (o 'salir' para terminar):");
             System.out.print("> ");
@@ -23,28 +25,68 @@ public class Lanzador {
 
             ProcessBuilder pb = new ProcessBuilder("factor", numero);
 
-            // Con esto conseguimos que utilice la consola para mostrar la salida y errores en caso de que se den
-            pb.inheritIO();
-
             Process proceso = pb.start();
 
-            // Se pone el waitFor para esperar a que el "proceso se ejecute"
+            BufferedReader lector = new BufferedReader(
+                    new InputStreamReader(proceso.getInputStream())
+            );
+
+            String linea = lector.readLine();
+
+            System.out.println(linea);
+
             int codigoSalida = proceso.waitFor();
 
-            // Ahora si que sacamos el código de salida una vez esperado a el proceso
             System.out.println("Operación completada. Código de salida: " + codigoSalida);
+
         }
     }
 
-    public static void funcion2(){
+    public static void nivel2() throws IOException, InterruptedException {
+        Scanner teclado = new Scanner(System.in);
+        String numero = "";
+
+        while (!numero.equals("salir")) {
+
+            System.out.println("Introduce un número (o 'salir' para terminar):");
+            System.out.print("> ");
+
+            numero = teclado.nextLine();
+
+            if (numero.equals("salir")) {
+                System.out.println("Saliendo del programa");
+                break;
+            }
+
+            ProcessBuilder pb = new ProcessBuilder("factor", numero);
+
+            Process proceso = pb.start();
+
+            int codigoSalida = proceso.waitFor();
+
+            String resultado;
+
+            if (codigoSalida == 0) {
+                resultado = "[OK]";
+            } else {
+                resultado = "[ERROR]";
+            }
+
+            BufferedReader lector = new BufferedReader(
+                    new InputStreamReader(proceso.getInputStream())
+            );
+
+            String linea = lector.readLine();
+
+            System.out.println(resultado + " " + linea);
+        }
+    }
+
+    public static void nivel3(){
 
     }
 
-    public static void funcion3(){
-
-    }
-
-    public static void funcion4(){
+    public static void nivel4(){
 
     }
 

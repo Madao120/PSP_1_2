@@ -1,8 +1,10 @@
 package org.example;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Interfaz {
-    public static void main(String args[]) {
+    // Añado el throws exception para que en caso de estos errores no se rompa el código (Inteliji me indicaba que hacían falta, me había olvidado de ponerlos)
+    public static void main(String args[]) throws IOException, InterruptedException {
         Scanner teclado = new Scanner(System.in);
         String input = "";
 
@@ -26,7 +28,6 @@ public class Interfaz {
 
                 case "2":
                     System.out.println("Se ha seleccionado el nivel 2");
-                    Lanzador.nivel2();
                     break;
 
                 case "3":
