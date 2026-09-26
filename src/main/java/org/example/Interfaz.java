@@ -28,14 +28,17 @@ public class Interfaz {
 
                 case "2":
                     System.out.println("Se ha seleccionado el nivel 2");
+                    Lanzador.nivel2();
                     break;
 
                 case "3":
                     System.out.println("Se ha seleccionado el nivel 3");
+                    Lanzador.nivel3();
                     break;
 
                 case "4":
                     System.out.println("Se ha seleccionado el nivel 4");
+                    Lanzador.nivel4();
                     break;
 
                 case "0":

@@ -1,8 +1,6 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class Lanzador {
@@ -24,6 +22,8 @@ public class Lanzador {
             }
 
             ProcessBuilder pb = new ProcessBuilder("factor", numero);
+
+            pb.redirectErrorStream(true);
 
             Process proceso = pb.start();
 
@@ -60,6 +60,8 @@ public class Lanzador {
 
             ProcessBuilder pb = new ProcessBuilder("factor", numero);
 
+            pb.redirectErrorStream(true);
+
             Process proceso = pb.start();
 
             int codigoSalida = proceso.waitFor();
@@ -82,26 +84,9 @@ public class Lanzador {
         }
     }
 
-    public static void nivel3(){
-
+    public static void nivel3() {
     }
 
-    public static void nivel4(){
-
-    }
-
-    // Función auxiliar para funcion1, para comprobar si numero es en verdad un numero
-    public static boolean esNumero(String str) {
-        if (str == null || str.isEmpty()) {
-            return false;
-        }
-        try {
-            // Si el número se para a Int dentro de la función es correcto
-            Integer.parseInt(str);
-            return true;
-        } catch (NumberFormatException e) {
-            // Si numero no puede pararse a int es que será un texto, dará false
-            return false;
-        }
+    public static void nivel4() {
     }
 }
