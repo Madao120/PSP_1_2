@@ -16,7 +16,7 @@ public class Lanzador {
         String numero = "";
 
         // Este ucle es el cual nos preguntará de que número queremos que salga el factor hasta que escribamos salir
-        while (!numero.equals("salir")) {
+        while (!numero.equalsIgnoreCase("salir")) {
 
             System.out.println("Introduce un número (o 'salir' para terminar):");
             System.out.print("> ");
@@ -25,7 +25,7 @@ public class Lanzador {
             numero = teclado.nextLine();
 
             // Mientras ese numero no sea salir no forzaremos que salga del bucle
-            if (numero.equals("salir")) {
+            if (numero.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa");
                 break;
             }
@@ -67,14 +67,14 @@ public class Lanzador {
         Scanner teclado = new Scanner(System.in);
         String numero = "";
 
-        while (!numero.equals("salir")) {
+        while (!numero.equalsIgnoreCase("salir")) {
 
             System.out.println("Introduce un número (o 'salir' para terminar):");
             System.out.print("> ");
 
             numero = teclado.nextLine();
 
-            if (numero.equals("salir")) {
+            if (numero.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa");
                 break;
             }
@@ -111,14 +111,14 @@ public class Lanzador {
         Scanner teclado = new Scanner(System.in);
         String numero = "";
 
-        while (!numero.equals("salir")) {
+        while (!numero.equalsIgnoreCase("salir")) {
 
             System.out.println("Introduce un número (o 'salir' para terminar):");
             System.out.print("> ");
 
             numero = teclado.nextLine();
 
-            if (numero.equals("salir")) {
+            if (numero.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa");
                 break;
             }
@@ -165,14 +165,14 @@ public class Lanzador {
         Scanner teclado = new Scanner(System.in);
         String numero = "";
 
-        while (!numero.equals("salir")) {
+        while (!numero.equalsIgnoreCase("salir")) {
 
             System.out.println("Introduce un número (o 'salir' para terminar):");
             System.out.print("> ");
 
             numero = teclado.nextLine();
 
-            if (numero.equals("salir")) {
+            if (numero.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa");
                 break;
             }
