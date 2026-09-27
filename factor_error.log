@@ -1,3 +1,5 @@
 [ERROR] error: unexpected argument '-1' found
 [ERROR] error: unexpected argument '-1' found
 [ERROR] factor: warning: hola: invalid digit found in string
+[ERROR] factor: warning: 'prueba final': invalid digit found in string
+[ERROR] error: unexpected argument '-5' found
