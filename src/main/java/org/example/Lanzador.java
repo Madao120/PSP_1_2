@@ -135,5 +135,50 @@ public class Lanzador {
     }
 
     public static void nivel4()  throws IOException, InterruptedException {
+        Scanner teclado = new Scanner(System.in);
+        String numero = "";
+
+        while (!numero.equals("salir")) {
+
+            System.out.println("Introduce un número (o 'salir' para terminar):");
+            System.out.print("> ");
+
+            numero = teclado.nextLine();
+
+            if (numero.equals("salir")) {
+                System.out.println("Saliendo del programa");
+                break;
+            }
+
+            ProcessBuilder pb = new ProcessBuilder("factor", numero);
+
+            pb.redirectErrorStream(true);
+
+            Process proceso = pb.start();
+
+            int codigoSalida = proceso.waitFor();
+
+            String resultado;
+
+            BufferedReader lector = new BufferedReader(
+                    new InputStreamReader(proceso.getInputStream())
+            );
+
+            String linea = lector.readLine();
+
+            if (codigoSalida == 0) {
+                resultado = "[OK]";
+                System.out.println(resultado + " " + linea);
+                if (linea.equals(numero + ": " + numero)) {
+                    System.out.println("¡" + numero + " es primo!");
+                } else {
+                    System.out.println(numero + " no es primo");
+                }
+            } else {
+                resultado = "[ERROR]";
+            }
+
+            System.out.println(resultado + " " + linea);
+        }
     }
 }
