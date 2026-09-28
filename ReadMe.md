@@ -18,3 +18,26 @@ por eso devuelvo líneas distintas en Salida de Factor de hola y -5, en el insta
 ### Incidencia 2
 #### Hubo un momento realizando las pruebas donde puse SALIR en ved de salir
 #### Por lo que acabé cambiando el .equals por .equalsIgnoreCase()
+
+## Nivel 1
+Aquí simplemente calcularemos el factor de un número
+![nivel1](capturas/1.png)
+
+## Nivel 2
+En caso de operación válida [OK], en caso contrario [ERROR]
+![nivel2](capturas/2.png)
+
+## Nivel 3
+En caso de operación válida guardamos el resutado en factor_output.log, en caso contrario factor_error.log
+![nivel3](capturas/3.png)
+
+Muestra de fichero de error
+![nivel3.1](capturas/3_1.png)
+
+MUestra de fichero de output
+![nivel3.2](capturas/3_2.png)
+
+## Nivel 4
+En caso de operación válida calcular si es primo
+![nivel4](capturas/4.png)
+

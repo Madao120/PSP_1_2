@@ -3,3 +3,5 @@
 [ERROR] factor: warning: hola: invalid digit found in string
 [ERROR] factor: warning: 'prueba final': invalid digit found in string
 [ERROR] error: unexpected argument '-5' found
+[ERROR] factor: opción inválida -- '3'
+[ERROR] factor: «soy diego c rodriguez» no es un entero positivo válido
