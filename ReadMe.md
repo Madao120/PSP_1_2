@@ -7,8 +7,8 @@ por eso devuelvo líneas distintas en Salida de Factor de hola y -5, en el insta
 | **360** | 360: 2 2 2 3 3 5 | Código de salida: 0 | 
 | **1** | 1: | Código de salida: 0 |
 | **17** | 17:17 | Código de salida: 0 |
-| **hola** | factor: warning: hola: invalid digit found in string | Código de salida: 1 |
-| **-5** | error: unexpected argument '-5' found | Código de salida: 1 |
+| **hola** | factor: warning: hola: invalid digit found in string <br> <b>Linux</b>: factor: «hola» no es un entero positivo válido| Código de salida: 1 |
+| **-5** | error: unexpected argument '-5' found <br> <b>Linux</b>: factor: opción inválida -- '5'| Código de salida: 1 |
 
 ---
 ### Incidencia 1
